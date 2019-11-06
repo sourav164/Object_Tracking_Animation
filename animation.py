@@ -3,7 +3,7 @@
 The structure of script is based on @Sina's matplotlib animation tutorials ( https://bit.ly/2rfaxP3 )
 
 The script is written to plot the locations of 7 tracked objects. By changing the number of data series [data, data2, data3,....] 
-and output line [line, line2, line3,....], the script can be edited to track different number of objects.
+and output line [line, line2, line3,....], it can be edited to track different number of objects.
 
 '''
 
@@ -12,7 +12,7 @@ from matplotlib import animation
 import pandas as pd
 import numpy as np
 
-# read data from csv file and drop the first row as it does not contain any location number but frame number
+# read data from csv file and drop the first row as it does not contain any location but the frame number
 df = pd.read_csv("all_loc.csv")
 df = df.drop(df.columns[0], 1)
 
@@ -32,7 +32,7 @@ def update_line(num, data, line, data2, line2, data3, line3, data4, line4, data5
     time_text.set_text("Frame: %.0f" % int(num))
     return line, line2, line3, line4, line5, line6, line7
 
-# x, y locations of each object are converted into np.array
+# x, y locations of each object is converted into numpy array
 data = np.array([df.iloc[:,0].values,df.iloc[:,1].values])
 data2 = np.array([df.iloc[:,2].values,df.iloc[:,3].values])
 data3 = np.array([df.iloc[:,4].values,df.iloc[:,5].values])
