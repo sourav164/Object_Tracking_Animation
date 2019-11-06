@@ -63,6 +63,7 @@ ax.legend()
 
 # create the video and save into the local directories
 time_text = ax.text(0.1,0.95,"", transform = ax.transAxes, fontsize = 15, color="green")
-line_ani = animation.FuncAnimation(fig, update_line, frames=500, fargs = (data, l, data2, k, data3, f, data4, a, data5,b, data6,c, data7, d))
+line_ani = animation.FuncAnimation(fig, update_line, frames=500, fargs = (data, l, data2, k, data3, f, 
+                                                                          data4, a, data5,b, data6,c, data7, d))
 plt.show()
 line_ani.save("persp_500.mp4", writer= writer)
