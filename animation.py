@@ -52,17 +52,22 @@ b= ax.plot([], [], 'k-', label = "Steer 5")[0]
 c= ax.plot([], [], 'b-', label = "Steer 6")[0]
 d= ax.plot([], [], 'g-', label = "Steer 7")[0]
 
+# place legend outside the plot
+box = ax.get_position()
+ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
 # hide the axes marker and ticks 
 ax.axes.get_xaxis().set_visible(False)
 ax.axes.get_yaxis().set_visible(False)
 
-# set the limit and add legends
-ax.set_ylim(0,1440)
-ax.set_xlim(0,1200)
-ax.legend()
+# set the limits based on your data
+ax.set_ylim(0,1500)
+ax.set_xlim(0,1500)
 
-# create the video and save into the local directories
-time_text = ax.text(0.1,0.95,"", transform = ax.transAxes, fontsize = 15, color="green")
+
+# create the video and save into the local directories, change the "frames=500" to any desirable number of frames you want to plot 
+time_text = ax.text(0.02,0.97,"", transform = ax.transAxes, fontsize = 11, color="green")
 line_ani = animation.FuncAnimation(fig, update_line, frames=500, fargs = (data, l, data2, k, data3, f, 
                                                                           data4, a, data5,b, data6,c, data7, d))
 plt.show()
