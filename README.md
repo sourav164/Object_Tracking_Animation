@@ -3,8 +3,11 @@ This script imports locations of different objects from a CSV file and exports a
 
 # Requirements-
 matplotlib
+
 pandas
+
 numpy
+
 ffmpeg 
 
 # ffmpeg Installation for Windows 10
