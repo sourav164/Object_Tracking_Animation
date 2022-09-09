@@ -12,3 +12,8 @@ This script imports locations of different objects from a CSV file and exports a
  - Extract the zip file in the local directory (e.g: C:\ )
  - Add the bin folder location in the system path (e.g: C:\ffmpeg-4.2.1-win64-static\bin)
 
+# ffmpeg Installation for Mac
+ - install xcode 
+ - run the commands provided here http://jollejolles.com/install-ffmpeg-on-mac-os-x/
+
+
